@@ -122,4 +122,15 @@ void Vector<value_type>
        arr[0] = val;
        ++size;
    }
+
+template <typename value_type>
+Vector<value_type>
+   ::Vector(Vector&& other) {
+       size = other.size;
+       capacity = other.capacity;
+       arr = other.arr;
+       other.arr = nullptr;
+   }
+
+
 #endif

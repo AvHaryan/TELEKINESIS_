@@ -20,6 +20,7 @@ public:
     Vector();
     Vector(const_reference value);
     Vector(const Vector& rhs);
+    Vector(Vector&& rhs);
     Vector(std::initializer_list<value_type> list);
     ~Vector();
     

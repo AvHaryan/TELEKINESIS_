@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
+project(MyVector)
 
-project(Vector)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+include_directories(headers)
+file(GLOB SOURCES "src/*.cpp")
+add_executable(VECTOR.exe ${SOURCES})
 
-add_executable(Vector main.cpp)
-
-#target_include_directories(Vector PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
