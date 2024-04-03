@@ -7,30 +7,19 @@
 
 class SpreadsheetCell {
 private:
-
-	 std::string m_value;
+    std::string m_value;
 
 public:
-	 //Default constructor
-	 SpreadsheetCell();
+    SpreadsheetCell();
+    SpreadsheetCell(const std::string& value);
+    ~SpreadsheetCell();
 
-	 //Parametrized constructor
-	 SpreadsheetCell(const std::string& value);
+    void setStringValue(const std::string& value);
+    std::string getStringValue() const;
 
-	 //Destructor
-	 ~SpreadsheetCell();
-
-	 //Method to set the content of the cell
-	 void setStringValue(const std::string& value);
-	 
-	 //Method to get the string value of the cell
-	 std::string getStringValue() const;
-
-	 //Method to get integer representation of the content
-	 int getIntValue() const;
-
-	 //Methot to get double representation of the content
-	 double getDoubleValue() const;
+    operator int() const;
+    operator double() const;
 };
 
-#endif // SPREADSHEET_H
+#endif // SPREADSHEET_CELL_H
+
